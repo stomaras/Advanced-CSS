@@ -69,6 +69,7 @@ body {
     top: 50%; /* In relation to the parent element */
     left: 50%; /* In relation to the parent element */
     transform: translate(-50%, -50%); /* In relation to the element intself */
+    text-align: center;
 }
 
 .heading-primary {
@@ -76,7 +77,7 @@ body {
     text-transform: uppercase;
 
     backface-visibility: hidden; /* backface-visibility property determines if the back part of the element when we transform it is visible or hidden for the user  */
-
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -149,6 +150,41 @@ body {
         transform: translateX(0);
     }
 
+}
+
+/*  We are gonna learn what pseudo-elements and pseudo-classes are
+*   How and why to use the :: after pseudo-element
+*   How to create a creative hover animation effect using the transition property.
+*/
+
+/* PseudoClass are special case of a selector */
+/* We use PseudoClasses to style elements under a special condition */
+/* Link is a special state of a selector when it is an anchor element so its functions as a link */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* offset in the x direction, then the y direction, then e direction, blur*/
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* offset in the x direction, then the y direction, then e direction, blur
+*/
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
 
 
