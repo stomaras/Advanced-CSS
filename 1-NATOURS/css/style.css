@@ -60,6 +60,10 @@ body {
     height: 35px;
 }
 
+.logo:hover {
+    animation: moveInRight 1s ease-out; /* i can use the animation multiple times in many places in the page */
+}
+
 .text-box {
     position: absolute;
     top: 50%; /* In relation to the parent element */
@@ -70,6 +74,9 @@ body {
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+
+    backface-visibility: hidden; /* backface-visibility property determines if the back part of the element when we transform it is visible or hidden for the user  */
+
 }
 
 .heading-primary-main {
@@ -77,6 +84,14 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+
+    /* these are the only properties that required for the animation to work */
+    animation-name: moveInLeft; /* Name of the animation property */
+    animation-duration: 1s; /* Animation Duration property*/
+    animation-timing-function: ease-out; /* The animation-timing-function CSS property specifies how a css animation should progress over the duration of each cycle */
+
+    /* animation-iteration-count: 3;*/ /* How much time will take the animation */
+    /* animation-delay: 3s; */
 }
 
 .heading-primary-sub {
@@ -84,5 +99,57 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out; /* instead of specyfing all of the above mentioned css properties we use animation and we can put all of these together and then CSS will figure out what means what*/
+
 }
+
+/*
+    How to create CSS animations using the keyframes at rule and the animation property
+
+    There are 2 types of animations in CSS the first one is to just use the transition property
+    and then change the properties that you want to animate on an event like when we hover the element.
+*/
+/*
+    I can specify what gonna happen in each moment of time of the animation.
+    Browser optimized for 2 properties : 1st opacity and 2nd transform property.
+*/
+@keyframes moveInLeft {
+    0% {
+        opacity: 0; /* At the beggining of the animation opacity must be zero */
+        transform: translateX(-100px); /* we want to animate in the x-direction   i put -100 because i want to be more in the left in the begining*/
+    }
+
+    60% {
+        transform: rotate(180deg); /* Degree is a unit we use for rotations */
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1; /* At the end the opacity must be one */
+        transform: translate(0); /* Will look as in the beggining */
+    }
+
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
 
