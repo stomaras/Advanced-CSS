@@ -67,13 +67,13 @@ body {
 /* I display both heading-primary as block level elements and create line breaks after and before them */
 
 /* transform: translate(-50%, -50%) ... this means 50% are now no longer from the parent but for the element itself*/
-.logo-box{
+.header__logo-box{
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
@@ -81,7 +81,7 @@ body {
     animation: moveInRight 1s ease-out; /* i can use the animation multiple times in many places in the page */
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 50%; /* In relation to the parent element */
     left: 50%; /* In relation to the parent element */
@@ -97,7 +97,7 @@ body {
     margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -112,7 +112,7 @@ body {
     /* animation-delay: 3s; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -219,7 +219,7 @@ body {
 */
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -241,7 +241,7 @@ body {
     transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -250,7 +250,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out 0.75s;
     animation-fill-mode: backwards; 
     /* This will automatically apply the styles up to zero percent before the animations start */

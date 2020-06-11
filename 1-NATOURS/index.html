@@ -14,23 +14,21 @@
         <!-- https://bennettfeely.com/clippy/ -->
     </head>
     <body>
-        <header class="header">
-            <div class="logo-box">
-                <img src="img/logo-white.png" alt="Logo" class="logo">
+        <!-- BEM Logic : Block Element Modifier -->
+        <header class="header"><!-- It's a block element has meaning alone  -->
+            <div class="header__logo-box"><!-- logo-box it's an element as it has not meaning on its own -->
+                <img src="img/logo-white.png" alt="Logo" class="header__logo"><!-- logo it's an element as it has no meaning on it's own  -->
             </div> 
 
-            <div class="text-box">    
-                <h1 class="heading-primary">
-                    <span class="heading-primary-main">Outdoors</span>
-                    <span class="heading-primary-sub">is where life happens</span>
+            <div class="header__text-box">    
+                <h1 class="heading-primary"><!-- It's a standalone block element -->
+                    <span class="heading-primary--main">Outdoors</span><!-- Modifier of the heading primary -->
+                    <span class="heading-primary--sub">is where life happens</span><!-- Modifier of the heading primary -->
                 </h1>
                 <!-- I will add an anchor element -->
-                <a href="#" class="btn btn-white btn-animated">Discover our tours</a>
-
+                <a href="#" class="btn btn--white btn--animated">Discover our tours</a><!-- button is a block white and animated are modifiers -->
                 </a>
             </div>
-
         </header>
-        
     </body>
 </html>
