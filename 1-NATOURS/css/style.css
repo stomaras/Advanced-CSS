@@ -152,6 +152,25 @@ body {
 
 }
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+
+
 /*  We are gonna learn what pseudo-elements and pseudo-classes are
 *   How and why to use the :: after pseudo-element
 *   How to create a creative hover animation effect using the transition property.
@@ -168,7 +187,7 @@ body {
     display: inline-block;
     border-radius: 100px;
     transition: all .2s;
-    
+    position: relative;
 }
 
 .btn:hover{
@@ -185,6 +204,38 @@ body {
 .btn-white {
     background-color: #fff;
     color: #777;
+}
+
+/* We are gonna use pseudo elements and pseudo elements allows us to style certain parts of elements 
+   z-index defines the position of the elements if they are one on top of another.
+*/
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out 0.75s;
+    animation-fill-mode: backwards; 
+    /* This will automatically apply the styles up to zero percent before the animations start */
 }
 
 
