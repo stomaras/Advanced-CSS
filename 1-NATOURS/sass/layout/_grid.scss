@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: rgb(192, 173, 173);
     margin: 0 auto; 
     
     // margin top and bottom are zero and margin left and right auto
@@ -24,7 +23,6 @@
     // we can also select links based on a specific href attribute.
     // we can also select anchor elements which have the target attribute set to blank.
     [class^="col-"]{
-        background-color: orangered;
         float: left;
 
         &:not(:last-child) {
