@@ -3,3 +3,32 @@
     padding: 25rem 0;
     margin-top: -20vh;
 }
+
+.section-features {
+    padding: 20rem 0;
+    background-image:linear-gradient(
+        to right bottom,
+         rgba($color-primary-light, 0.8),
+         rgba($color-primary-dark, 0.8)), 
+    url(../img/nat-4.jpg);
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    & > * {
+        transform: skewY(7deg);
+    }
+
+
+}
+
+/*
+
+    & > * {
+        transform: skewY(7deg);
+    }
+    This means that we add the skewY(7deg) in all childrens of the parent .section-features 
+
+*/
+
+//.section-features > * so basically, .section-features and then direct childs all of them
